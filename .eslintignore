@@ -1,0 +1,22 @@
+node_modules/
+.vscode
+
+*.md
+*.yaml
+
+**/dist*
+**/test*
+**/tscOutput*
+**/doc*
+**/visualizer*
+
+changelog.config.js
+commitlint.config.js
+.versionrc.js
+.cz-config.js
+
+.eslintrc.js
+.eslintrc.json
+.eslintrc
+
+# **.test.*

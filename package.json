@@ -1,0 +1,73 @@
+{
+  "name": "@l-package/v2-collection-components",
+  "version": "1.0.0",
+  "description": "v2-collection-components is learn and build vue2.0 components",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "docs",
+    "start"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release-patch-beta": "standard-version --release-as patch --prerelease beta",
+    "release-patch-beta:dry": "standard-version --release-as patch --prerelease beta --dry-run",
+    "release-patch": "standard-version --release-as patch",
+    "release-patch:dry": "standard-version --release-as patch --dry-run",
+    "major-alpha": "standard-version --release-as major --prerelease alpha",
+    "major-alpha:dry": "standard-version --release-as major --prerelease alpha --dry-run",
+    "prepare": "husky",
+    "lint": "pnpm run format && eslint --cache --max-warnings=0",
+    "lint:fix": "pnpm run lint --fix",
+    "format": "prettier --config .prettierrc . --write",
+    "format-watch": "onchange -d 1000 **/* -- prettier --config .prettierrc --write {{changed}}",
+    "tag-push-master": "git push --follow-tags origin master"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "git-cz": "^4.9.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "onchange": "^7.1.0",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.11",
+    "rimraf": "^5.0.7",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.3.3",
+    "lint-staged": "^13.0.3",
+    "eslint": "^8.56.0"
+  },
+  "keywords": [
+    "v2Collection",
+    "v2-collection",
+    "v2-collection-components",
+    "vue2-collection-components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyszxm/v2-collection-components"
+  },
+  "author": "lys",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16",
+    "pnpm": "~8.15.3",
+    "npm": ">7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue,json,md,yml,yaml}": [
+      "eslint --fix"
+    ]
+  }
+}

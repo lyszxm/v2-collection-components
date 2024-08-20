@@ -1,0 +1,26 @@
+node_modules/
+# .vscode
+
+*.json
+*.md
+*.yaml
+
+**/dist
+# **/test
+
+changelog.config.js
+# commitlint.config.js
+.versionrc.js
+.cz-config.js
+
+.eslintrc.js
+.eslintrc.json
+.eslintrc
+
+package-lock.json
+!package.json
+!tsconfig-base.json
+!tsconfig.json
+!settings.json
+!tsconfig-tsc.json
+!tsconfig-cjs.json
